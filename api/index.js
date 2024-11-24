@@ -26,3 +26,16 @@ app.listen(3000, () => {
 app.use('/api/user', userRouter);
 
 app.use('/api/auth', authRouter);
+
+//Creating middleware 
+//error will from the input 
+app.use((err, req, res, next) => {
+  const statusCode = err.statusCode || 500;
+  const message = err.message || 'Internal Server Error';
+  return res.status(statusCode).json({
+    success: false,
+    statusCode,
+    message,
+  });
+});
+//in order to get more  comprehension error which includes-success, statusCode and message all
