@@ -6,6 +6,7 @@ export default function SignUp() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  //handling onchange event listner 
   const handleChange = (e) => {
     setFormData({
       ...formData,
