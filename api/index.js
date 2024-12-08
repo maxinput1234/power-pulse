@@ -38,4 +38,4 @@ app.use((err, req, res, next) => {
     message,
   });
 });
-//in order to get more  comprehension error which includes-success, statusCode and message all
+//in order to get more  comprehension error which includes-success, statusCode and message all.
